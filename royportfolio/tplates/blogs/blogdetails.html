@@ -1,0 +1,503 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--font-family-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- title of site -->
+    <title>Directory Landing Page</title>
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png' %}" />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="{% static 'assets/css/linearicons.css' %}">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+<style>
+    #colbold {
+        color: rgb(245, 117, 31);
+    }
+
+    .foot1 {
+        height: 60px;
+        width: 100%;
+        background-color: black;
+    }
+
+    .foot1 h1 {
+        font-size: 2rem;
+        color: white;
+        font-style: normal;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+    }
+
+
+
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .set1 {
+        height: 700px;
+        width: 100%;
+        /* background-image: url("{% static 'img/allblog/all1.jpg'%}"); */
+        background:url("{% static 'img/3.jpg' %}");
+    }
+
+    #text1 {
+        font-size: 4rem;
+        color: white;
+        margin-top: 7%;
+        text-align: center;
+    }
+
+    #text2 {
+        font-size: 2.4rem;
+        color: rgb(255, 255, 255);
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+    }
+
+    #clicktosearch {
+        height: 55px;
+        width: 9%;
+        background-color: rgb(245, 65, 65);
+        border: 1px solid rgb(245, 65, 65);
+    }
+
+    #searchinput {
+        height: 55px;
+        width: 30%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    /* design for blog content */
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #blogtitle {
+        margin-top: 2%;
+        font-size: 5rem;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .content1 h2 {
+        font-size: 4rem;
+    }
+
+    .description {
+
+        width: 100%;
+        max-width: 700px;
+        height: 300px;
+    }
+
+    .description p {
+        font-size: 2.1rem;
+    }
+
+    .wholeblog {
+        width: 80%;
+        margin-left: 10%;
+        font-size: 1.62rem;
+        color: black;
+    }
+
+    .fimg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bimage {
+        width: 600px;
+    }
+
+    #blogdetails {
+        font-size: 2rem;
+    }
+
+    /* Making the page responsive */
+    @media (max-width: 1200px) {
+
+        #text1 {
+            font-size: 3rem;
+            color: white;
+            margin-top: 12%;
+            text-align: center;
+        }
+
+        #text2 {
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            margin-top: 1%;
+            text-align: center;
+        }
+
+        #clicktosearch {
+            height: 55px;
+            width: 17%;
+            background-color: rgb(245, 65, 65);
+            border: 1px solid rgb(245, 65, 65);
+        }
+
+        .set1 {
+            height: 400px;
+            width: 100%;
+            filter: blur(0.2px);
+            opacity: 0.7;
+        }
+        #clicktosearch {
+    height: 55px;
+    width: 25%;
+    background-color: rgb(245, 65, 65);
+    border: 1px solid rgb(245, 65, 65);
+    color: white;
+    font-size: 1.8rem;
+}
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 150px;
+            margin-right: 50px;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .content {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin-left: 150px;
+            margin-right: 50px;
+        }
+
+        .content1 h2 {
+            font-size: 2rem;
+        }
+
+        .description {
+            width: 100%;
+            max-width: 700px;
+            height: 100%;
+        }
+
+        #blogdetails {
+            font-size: 1.5rem;
+        }
+        #clicktosearch {
+    height: 55px;
+    width: 28%;
+    background-color: rgb(245, 65, 65);
+    border: 1px solid rgb(245, 65, 65);
+    color: white;
+    font-size: 1.8rem;
+}
+
+    }
+
+    @media (max-width: 700px) {
+        .content {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        #blogdetails {
+            font-size: 1.5rem;
+        }
+        #clicktosearch {
+    height: 55px;
+    width: 28%;
+    background-color: rgb(245, 65, 65);
+    border: 1px solid rgb(245, 65, 65);
+    color: white;
+    font-size: 1.8rem;
+}
+
+    }
+
+    @media (max-width: 450px) {
+        #text1 {
+            font-size: 2rem;
+            color: white;
+            margin-top: 31%;
+            text-align: center;
+        }
+
+        #text2 {
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            margin-top: 1%;
+            text-align: center;
+        }
+
+        #clicktosearch {
+            height: 55px;
+            width: 41%;
+            background-color: rgb(245, 65, 65);
+            border: 1px solid rgb(245, 65, 65);
+        }
+
+        .set1 {
+            height: 400px;
+            width: 100%;
+          
+            filter: blur(0.2px);
+            opacity: 0.7;
+        }
+
+        #blogdetails {
+            font-size: 1.5rem;
+        }
+        #clicktosearch {
+    height: 55px;
+    width: 28%;
+    background-color: rgb(245, 65, 65);
+    border: 1px solid rgb(245, 65, 65);
+    color: white;
+    font-size: 1.8rem;
+}
+
+    }
+
+    #clicktosearch {
+        background-color: rgb(245, 65, 65);
+        border: 1px solid rgb(245, 65, 65);
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    #allimg {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #Productlink {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #productlink{
+        color: rgb(81, 142, 255);
+    }
+</style>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+
+    <!-- top-area Start -->
+    <section class="top-area">
+        <div class="header-area">
+            <!-- Start Navigation -->
+            <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+                data-minus-value-mobile="55" data-speed="1000">
+
+                <div class="container">
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="index.html">ST<span>ocky</span></a>
+
+                    </div><!--/.navbar-header-->
+                    <!-- End Header Navigation -->
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="{% url 'allblog' %}">blog</a></li>
+                            <li class="scroll"><a href="#contact">contact</a></li>
+                            <li><a href="{% url 'login_view' %}"><b id="colbold">Login</b></a></li>
+                            <li><a href="{% url 'register' %}"><b id="colbold">SignUp</b></a></li>
+                        </ul><!--/.nav -->
+                    </div><!-- /.navbar-collapse -->
+                </div><!--/.container-->
+            </nav><!--/nav-->
+            <!-- End Navigation -->
+        </div><!--/.header-area-->
+        <div class="clearfix"></div>
+
+    </section><!-- /.top-area-->
+    <!-- top-area End -->
+
+
+    <div class="allblog">
+        <div class="set1">
+            .
+            <h1 id="text1">BEST PLACE TO READ ALL THE NEW BLOGS</h1>
+            <h1 id="text2">ABOUT INSTRESTING TOPICS ( SEARCH YOUR BLOG BELOW ) </h1>
+            <div class="search">
+
+                <button id="clicktosearch">Contact Me</button>
+
+            </div>
+        </div>
+        .
+        <!--blog start -->
+        <h1 id="blogtitle">Blog Title : {{post.title}}</h1>
+        <div class="content">
+            .
+
+            <div class="content1">
+                <h2>WELCOME TO MY BLOG !</h1>
+
+                    <div class="description">
+                        <p>{{post.desc}}</p>
+                    </div>
+            </div>
+            <div class="content2">
+                <img id="bimage" class="img-fluid" src="{{post.thumbleimage.url}}" alt="">
+            </div>
+        </div>
+        <div class="wholeblog">
+            <p id="blogdetails">{{post.content1}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content2}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content3}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content4}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content5}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content6}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content7}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+            <p id="blogdetails">{{post.content8}}</p>
+            <div class="fimg">
+                <img id="allimg" class="img-fluid" src="{{post.blogimg.url}}" alt="">
+            </div>
+
+            <h1 id="Productlink">Product Link - <a href="{{post.link}}"><b id="productlink"> {{post.productname}}</b></a> </h1>
+        </div>
+        <!--blog end -->
+    </div>
+
+    <!--footer start-->
+    <footer>
+        <div class="foot1">
+            .
+            <h1>krishtrade.com, All Right Reserved. Designed and developed By Krish</h1>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- bootsnav js -->
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+
+    <!--feather.min.js-->
+    <script src="{% static 'assets/js/feather.min.js' %}"></script>
+
+    <!-- counter js -->
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+
+    <!--slick.min.js-->
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+
+</html>
+
+<!-- 
+name = krishstocky
+password = stocky2023krish@-/ -->

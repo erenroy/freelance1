@@ -1,0 +1,13 @@
+admin name = erenroy
+admin password = roy2004@p
+
+
+pysh2040op@
+
+pic = user , 8 , 
+
+name = krishstocky1
+password = stocky2024krish@-/
+
+
+User.objects.get(username="erenroy" ,is_superuser=True).delete()
